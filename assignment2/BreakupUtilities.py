@@ -1765,7 +1765,8 @@ def unit_test_SALT_prop():
     plt.plot(tsec/86400., SMA/1000., 'k.')
     plt.xlabel('Time [days]')
     plt.ylabel('SMA [km]')
-    
+    plt.show()
+
     return
 
 
@@ -1800,6 +1801,7 @@ def unit_test_tudat_prop():
     plt.plot(tsec/86400., SMA/1000., 'k.')
     plt.xlabel('Time [days]')
     plt.ylabel('SMA [km]')
+    plt.show()
     
     return
 
@@ -1833,7 +1835,8 @@ def plot_breakup_stats(lc_array, N_bin, N_cum, lc_list_full, A_list, A_m_list, m
     plt.loglog(A_m_list, dV_mag_list, 'k.')
     plt.xlabel('A/m Ratio [m$^2$/kg]')
     plt.ylabel('delta-V [m/s]')
-    
+
+    plt.show()
     
     return
 

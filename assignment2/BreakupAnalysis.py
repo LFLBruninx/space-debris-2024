@@ -16,30 +16,31 @@ plt.close('all')
 ###############################################################################
 
 # Target orbit and epoch [UTC]
-initial_epoch = datetime(2019, 7, 24, 0, 0, 0)
+initial_epoch = datetime(2023, 4, 1, 12, 0, 0)
 
 # Envisat
-SMA_meters = 7143.4*1000.
-ECC = 0.0001427
-INC_rad = 98.1478*np.pi/180.
-RAAN_rad = 224.8380*np.pi/180.
-AOP_rad = 93.2798*np.pi/180.
-TA_rad = 0.*np.pi/180.
+SMA_meters = 26562.03*1000.
+ECC = 0.0111924
+INC_rad = 54.50*np.pi/180.
+RAAN_rad = 255.55*np.pi/180.
+AOP_rad = 60.00*np.pi/180.
+TA_rad = 89.54*np.pi/180.
 
 # Impact Parameters
-mass_target = 8211.
-mass_impactor = 3.4
-impact_velocity = 14.*1000.
+mass_target = 1630.
+mass_impactor = 8.52942
+impact_velocity = 4.45300*1000.
 
 # Spacecraft drag and SRP parameters
 Cd = 2.2
 Cr = 1.3
 
 # Propagation time in seconds
-tfinal_sec = 86400.*90.
+tfinal_sec = 86400. * 3650  # should eventually be 10 years
 
 # Maximum number of objects to keep for propagation and plots
-N_max = 10
+N_max = 100                # should eventually be at least 100
+
 
 # One at a time flag for MEO/GEO propagation
 # Set to True will propagate objects one at a time and print status
@@ -52,7 +53,7 @@ np.random.seed(1)
 
 # Output directory and filename
 outdir = 'output'
-fname = os.path.join(outdir, 'breakup_data.pkl')
+fname = os.path.join(outdir, 'breakup_databreakup_data.pkl')
 
 
 
